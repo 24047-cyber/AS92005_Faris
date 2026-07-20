@@ -2,23 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Adapts the user's visual scale to their device size -->
     <title>Water Quality- Home</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"> <!-- Links to css page (external) -->
 </head>
-
 <body>
 
-<div class="top-bar">
-    <h6>New Zealand Standards</h6>
-</div>
+<header class="site-header">
+    <span class="logo-box">QS</span> <!--The corner logo (QS stands for "Quality (and) Standards")-->
+    <span class="header-name">NZ Standards</span>
+</header>
 
-<h1>Water Quality</h1>
-<h3>Importance and Management of Water Quality</h3>
-<img src="https://i.ibb.co/2YW6f9SX/Screenshot-2026-06-16-101104.png" alt="Topics: Quality, Processes, Safety and Treatment, Testing, Locations, Sources" border="10">
-<h4>Further Information</h4>
+<!-- This is the header (top bar) for the home page-->
 
- <div class="navbar">
+<main>
+    <section class="hero hero--home"> <!-- gives this section a class as the "main" piece of content (the main banner at the top of the page)
+    , useful for identification when adjusting code, making changes, and css management-->
+        <h1>Water Quality</h1>
+        <p class="sub">Water quality and refinement</p> <!-- creates a subclass-->
+    </section>
+
+ <div class="card card--flush"> <!-- main container with flush styling-->
+            <img class="widget-img"
+                 src="https://i.ibb.co/2YW6f9SX/Screenshot-2026-06-16-101104.png"
+                 alt="Water Quality Website Item Inclusion">
+        </div>
+
+   <a class="further-link" href="Further information.html">Further information</a>
+</main> <!-- Link to the further information page-->
+
+ <div class="bottom-navbar"> <!-- Container (section) class, useful for CSS-->
     <a href="Methods.html" class="active">Methods</a>
     <a href="About.html" class="active">About</a>
     <a href="Systems.html" class="active">Systems</a>
