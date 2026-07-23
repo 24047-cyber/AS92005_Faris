@@ -2,43 +2,71 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Adapts the user's visual scale to their device size -->
     <title>Water Quality- Methods</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"> <!-- Links to css page (external) -->
 </head>
-
 <body>
 
-<div class="top-bar">
-    <h6>New Zealand Standards</h6>
-</div>
+<header class="site-header">
+    <span class="logo-box">QS</span> <!--The corner logo (QS stands for "Quality (and) Standards")-->
+    <span class="header-name">NZ Standards</span>
+</header>
 
-<h1>Methods</h1>
-<h3>Methods of water quality management</h3>
+<!-- This is the header (top bar) for the home page-->
 
-<p>1. Screening: Filters large debris through metal screens.
-2. Coagulation: Clumps contaminants using aluminium sulfate.
-3. Clarification (Sedimentation): Settles abd removes heavy particles.
-4. Filtration: Traps remaining particles using sand.
-5. Disinfection: Kills germs by adding chlorine.
-6. Fluoridation: Adds fluoride to the water supply.
-7. pH Balancing: Normalises pH in the final stage.
-</p>
+<main>
+    <section class="hero"> <!-- gives this section a class as the "main" piece of content (the main banner at the top of the page)
+    , useful for identification when adjusting code, making changes, and css management-->
+        <!-- (BEM convention)-->
+        <h1>Methods</h1>
+        <p class="sub">How our water is managed</p> <!-- creates a subclass-->
+    </section>
 
+<div class="card">
+        <div class="methods-top">
+            <ol class="steps-list">
+                <li><span class="n">1. </span><strong>Screening:</strong> Filters large debris through metal screens.</li>
+                <li><span class="n">2. </span><strong>Coagulation:</strong> Clumps contaminants using aluminium sulphate.</li>
+                <li><span class="n">3. </span><strong>Clarification (Sedimentation):</strong> Settles and removes heavy particles.</li>
+                <li><span class="n">4. </span><strong>Filtration:</strong> Traps remaining particles using sand.</li>
+                <li><span class="n">5. </span><strong>Disinfection:</strong> Kills germs by adding chlorine.</li>
+                <li><span class="n">6. </span><strong>Fluoridation:</strong> Adds fluoride to the supply.</li>
+                <li><span class="n">7. </span><strong>pH Balancing:</strong> Normalises pH in the final stage.</li>
+            </ol>
+            <div class="methods-diagram">
+                <img src="https://i.ibb.co/GYVs8HL/image.png"
+                     alt="Coagulation, Sedimentation and Filtration  (General Process)">
+            </div>
+        </div>
+    </div> <!-- By adding these divisions (through "div") we make organisation much easier (absolutely necessary for css) -->
+<!-- "ol" was used for ordered lists (1, 2, etc.). -->
 
-<img src="https://i.ibb.co/GYVs8HL/image.png" alt="Methods Diagram" border="10">
-<img src="https://i.ibb.co/MkmRQSzx/image.png" alt="Methods Diagram 2" border="10">
+<div class="card">
+            <div class="purification-row">
+                <img src="https://i.ibb.co/MkmRQSzx/image.png"
+                     alt="Water Purification Process">
+                <div class="purification-text">
+                    Text about NZ specific factors and details, and
+                    which organisations/branches
+                    are in charge.
+                </div>
+            </div>
+        </div>
 
-<p>Water supplies in New Zealand are typically sourced through surface water (rivers, streams, lakes), groundwater, and rainwater. </p>
-<p>New Zealand doesn't primarily rely on (or even have) desalination plants and seawater, as it is more complicated and costly.</p>
-<p>Purification plants have regular monitoring, to locate and resolve any issues if necessary.</p>
+        <!-- The three detail boxes (as shown on planned design)-->
+        <div class="details-row">
+            <div class="card">Details/ideas/text</div>
+            <div class="card">Details/ideas/text</div>
+            <div class="card">Details/ideas/text</div>
+        </div>
+    </main>
 
-
- <div class="navbar">
-    <a href="Home.html" class="active">Home</a>
-    <a href="About.html" class="active">About</a>
-    <a href="Systems.html" class="active">Systems</a>
-  </div>
+    <nav class="bottom-nav">
+        <a href="Methods.html" class="active">Methods</a>
+        <a href="About.html">About</a>
+        <a href="Systems.html">Systems</a>
+    </nav>
 
 </body>
 </html>
