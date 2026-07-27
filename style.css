@@ -12,12 +12,129 @@ img {
     display: block;
 }
 
-:root { /* takes prority over other attributes ("html") */ /* these naming conventions are what I've used before, so it is consistent */
+:root { /* takes priority over other attributes ("html") */ /* these naming conventions are what I've used before, so it is consistent */
     --bg: #0d0d0d; /* these are stored variables that make later css easier ("var([insert variable name here]") */
-    --bg-card: #121212; /* slightly lighter colour like in wireframe/designs
-
-
-
+    --bg-card: #121212; /* slightly lighter colour like in wireframe/designs */
+    --text: #dbd3be;
+    --text-dim:   #7a7870;
+    --text-muted: #494845;
+    --gold:       #c8a650;
+    --gold-hover: #e0c070;
+    --white:      #f0e8d4;
+    --border:     #222222;
+    --border-mid: #2c2c2c;
+    --header-h:   44px;
+    --nav-h:      48px;
 
 
 }
+
+body {
+    background-colour:
+    var(--bg); /* The variable(s) from above */
+    color: var(--text);
+    font-family: Georgia- "Times New Roman", serif;
+    min-height: 100vh;  /* "vh" refers to "Viewport height", a "percentage of the screen taken up" rather than pixel count. */
+    /* It is also relative to the browser window. "100vh" means 100% of the browser window, required for different
+    screen sizes AND full coverage (as a background) */
+    padding-top: var(--header-h);
+    padding-bottom: var(--nav-h);
+    line-height: 1.65;
+    font-size: 15px;
+}
+
+/* ---------- The header -------------*/
+
+.site-header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: var(--header-h); /* Variable from above */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px; /* The physical padding shown */
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    z-index: 200; /* The order of which elements are stacked, higher values stack on top of lower ones */
+    /* I've used things such as variables, vh, and z-index in my own projects so I will be using the same naming conventions */
+
+}
+
+/* ------ Logo Box ("QS" standing for "Quality and Safety") ------- */
+
+
+.logo-box {
+    display: inline-flex; /* Flexbox */
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid var(--white);
+    padding: 2px 8px;
+    font-size: 12px;
+    font-weight: bold; /* As seen on wireframes/designs */
+    letter-spacing: 1px;
+    color: var(--white);
+    line-height: 1.4;
+
+}
+
+
+
+
+
+/* --------------------MAIN----------------------- */
+
+main {
+    max-width: 640px;
+    margin: 0 auto; /* "0" here specifically indicates 0 pixels on the top and bottom, auto on the sides */
+    padding: 0 16px 24px;
+
+}
+
+/* -------------------HERO-------------*/ /* (From other pages "earlier") */
+
+
+.hero {
+    text-align: center;
+    padding: 44px 12px 32px;
+}
+
+.hero h1 { /* Applies to h1 */
+    color: var(--white);
+    font-weight: bold;
+    line-height: 1.1;
+    margin-bottom: 10px;
+    font-size: 44px;
+}
+
+.hero--home h1 { font-size: 56px; }
+.hero--sm h1   { font-size: 36px; }
+
+.hero .sub {
+    font-size: 13.5px;
+    color: var(--text-dim);
+    letter-spacing: 0.3px;
+}
+
+/* -----------------------------CARDS -------------------- */ /* (From other pages "earlier" */
+
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    padding: 18px 20px;
+    margin-bottom: 12px;
+}
+
+.card--flush { padding: 10px; }
+
+/* Links */
+
+a { /* "a" stands for "anchor" */
+    color: var(--gold);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+a:hover { color: var(--gold-hover); } /* When hovering over the link, controls the color */
+
+/* ---------------------------bottom nav ------------
