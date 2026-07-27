@@ -1,52 +1,77 @@
 <!DOCTYPE html>
- <html lang="en">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Water Quality- Further Information</title>
+    <title>Further Information — NZ Water Quality</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div class="top-bar">
-    <h6>New Zealand Standards</h6>
-</div>
+    <header class="site-header">
+        <span class="logo-box">QS</span>
+        <span class="header-brand">NZ Standards</span>
+    </header>
 
-<h1>Further Information</h1>
-<h3>[Placeholder]</h3>
+    <main>
+        <section class="hero hero--sm">
+            <h1>Further Information</h1>
+            <p class="sub">Subheading</p>
+        </section>
 
-<p>If you would like further information, have a look at https://www.aucklandcouncil.govt.nz/en/environment/looking-after-aucklands-water.html (Auckland)</p>
+        <!-- Council link -->
+        <div class="card auckland-card">
+            If you would like further information, have a look at
+            <a href="https://www.aucklandcouncil.govt.nz/en/environment/looking-after-aucklands-water.html"
+               target="_blank" rel="noopener">
+                https://www.aucklandcouncil.govt.nz/en/environment/looking-after-aucklands-water.html
+            </a>
+            (Auckland)
+        </div>
 
-<img src="https://i.ibb.co/MkmRQSzx/image.png" alt="Diagram" border="10">
+        <!-- Bullet points + LAWA map -->
+        <div class="fi-row">
+            <div class="card bullets-card">
+                <ul>
+                    <li>(text)</li>
+                    <li>(text)</li>
+                    <li>(text)</li>
+                </ul>
+            </div>
+            <div class="lawa-wrap">
+                <iframe
+                    src="https://lawa.org.nz"
+                    title="LAWA New Zealand Water Quality Map"
+                    width="100%"
+                    height="100%"
+                    allowfullscreen=""
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
 
+        <!-- Contact form -->
+        <div class="card form-card">
+            <h3>Contact Form</h3>
+            <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <input type="text"  name="name"    placeholder="Your name"    required>
+                <input type="email" name="email"   placeholder="Your email"   required>
+                <textarea           name="message" placeholder="Your message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
 
- <div class="navbar">
-    <a href="Home.html" class="active">Home</a>
-    <a href="Methods.html" class="active">Methods</a>
-    <a href="Systems.html" class="active">Systems</a>
-  </div>
+        <!-- Footer / extras -->
+        <div class="card footer-card">
+            Extras/footer
+        </div>
+    </main>
 
-<p>https://www.waterfiltersonline.co.nz/collections/reverse-osmosis</p>
-<p>Phone New Zealand water hotline on 0800 454 715 to report water pollution or water quality issues.</p>
-
-<form
-  action="https://formspree.io/f/xpqglgkv"
-  method="POST"
->
-  <label>
-    Your email:
-    <input type="email" name="email">
-  </label>
-  <label>
-    Your message:
-    <textarea name="message"></textarea>
-  </label> 
-  <!-- your  (the user) other form fields go here -->
-  <button type="submit">Send</button>
-</form>
-
+    <nav class="bottom-nav">
+        <a href="Methods.html">Methods</a>
+        <a href="About.html">About</a>
+        <a href="Systems.html">Systems</a>
+    </nav>
 
 </body>
 </html>
-<!-- Remember: comments on code, and remember to refer to kaiaikitanga -->
