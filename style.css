@@ -12,7 +12,7 @@ img {
     display: block;
 }
 
-:root { /* takes prority over other attributes ("html") */ /* these naming conventions are what I've used before, so other things
+:root { /* takes prority over other attributes ("html") */ /* these naming conventions are what I've used before, so it is consistent */
     --bg: #0d0d0d; /* these are stored variables that make later css easier ("var([insert variable name here]") */
     --bg-card: #121212; /* slightly lighter colour like in wireframe/designs
 
