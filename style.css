@@ -6,3 +6,18 @@
 
 /* removes default browser styles (e.g. built in borders that may ruin designs) */
 
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+:root { /* takes prority over other attributes ("html") */ /* these naming conventions are what I've used before, so other things
+    --bg: #0d0d0d; /* these are stored variables that make later css easier ("var([insert variable name here]") */
+    --bg-card: #121212; /* slightly lighter colour like in wireframe/designs
+
+
+
+
+
+}
