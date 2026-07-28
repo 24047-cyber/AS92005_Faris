@@ -30,8 +30,7 @@ img {
 }
 
 body {
-    background-colour:
-    var(--bg); /* The variable(s) from above */
+    background-colour: var(--bg); /* The variable(s) from above */
     color: var(--text);
     font-family: Georgia- "Times New Roman", serif;
     min-height: 100vh;  /* "vh" refers to "Viewport height", a "percentage of the screen taken up" rather than pixel count. */
@@ -139,7 +138,7 @@ a:hover { color: var(--gold-hover); } /* When hovering over the link, controls t
 
 /* ---------------------------bottom nav ------------ -- */
 
-.bottom-nav {
+.bottom-navbar {
     position: fixed;
     bottom: 0; left: 0; right: 0;
     height: var(--nav-h);
@@ -149,7 +148,7 @@ a:hover { color: var(--gold-hover); } /* When hovering over the link, controls t
     z-index: 200;
 }
 
-.bottom-nav a {
+.bottom-navbar a {
     flex: 1;
     display: flex;
     align-items: center;
@@ -163,9 +162,9 @@ a:hover { color: var(--gold-hover); } /* When hovering over the link, controls t
     -webkit-tap-highlight-color: transparent; /* highlight color (options) */
 }
 
-.bottom-nav a:last-child { border-right: none; } /* last child in its parent container */
-.bottom-nav a:hover,
-.bottom-nav a.active { color: var(--gold); }
+.bottom-navbar a:last-child { border-right: none; } /* last child in its parent container */
+.bottom-navbar a:hover,
+.bottom-navbar a.active { color: var(--gold); }
 
 /* --------------------------------HOMEPAGE ---------------------*/
 
@@ -226,3 +225,285 @@ a:hover { color: var(--gold-hover); } /* When hovering over the link, controls t
     display: flex;
     gap: 10px;
 }
+
+.details-row .card {
+    flex: 1;
+    margin-bottom: 0;
+    font-size: 12.5px;
+    color: var(--text-dim);
+    line-height: 1.6;
+}
+
+
+/* ----------------------------------SYSTEMS PAGE -----------------------*/
+
+.niwa-intro {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.55;
+    color: var(--white);
+}
+
+.systems-img { width: 100%; border-radius: 2px; }
+
+.niwa-bottom {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.niwa-bottom .card {
+    margin-bottom: 0;
+    font-size: 13px;
+    line-height: 1.65;
+}
+
+.niwa-bottom .card:first-child { flex: 1.7; }
+.niwa-bottom .card:last-child  { flex: 1; }
+.niwa-bottom .card p + p       { margin-top: 6px; }
+
+.cat { color: var(--white); font-weight: bold; }
+
+
+/* ------------------------------ ABOUT PAGE ---------------------- */
+
+.info-card {
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.75;
+    padding: 22px 26px;
+}
+
+/* The timeline (in wireframe/design(s)) */
+.timeline-card { padding: 20px 22px; }
+
+.timeline-label {
+    text-align: center;
+    font-size: 10.5px;
+    color: var(--text-muted);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.timeline {
+    border-left: 1px solid var(--border-mid);
+    padding-left: 20px;
+    margin-left: 6px;
+}
+
+.tl-item {
+    position: relative;
+    margin-bottom: 18px;
+}
+
+.tl-item:last-child { margin-bottom: 0; }
+
+.tl-item::before {
+    content: '';
+    position: absolute;
+    left: -25px;
+    top: 3px;
+    width: 10px;
+    height: 10px;
+    border: 1.5px solid var(--gold);
+    border-radius: 50%;
+    background: var(--bg-card);
+}
+
+.tl-year {
+    display: inline-block;
+    font-size: 11px;
+    color: var(--gold);
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    margin-bottom: 3px;
+}
+
+.tl-text {
+    display: block;
+    font-size: 12.5px;
+    color: var(--text-dim);
+    line-height: 1.55;
+}
+
+.links-card {
+    text-align: center;
+    font-size: 13px;
+    line-height: 2;
+}
+
+
+/* -------------------------------------------FURTHER INFORMATION (fi) PAGE ------------------------------- */
+
+.auckland-card {
+    text-align: center;
+    font-size: 13.5px;
+    line-height: 1.8;
+}
+
+.fi-row {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 12px;
+    min-height: 260px;
+}
+
+.bullets-card {
+    flex: 0 0 36%;
+    margin-bottom: 0;
+    padding: 14px 16px;
+}
+
+.bullets-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.bullets-card ul li {
+    padding: 10px 0;
+    font-size: 13px;
+    color: var(--text-dim);
+    border-bottom: 1px solid var(--border);
+    line-height: 1.5;
+}
+
+.bullets-card ul li:last-child { border-bottom: none; } /* Last child ion parent container */
+
+.bullets-card ul li::before {
+    content: "– ";
+    color: var(--gold);
+}
+
+.lawa-wrap {
+    flex: 1;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.lawa-wrap iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 260px;
+    border: none;
+    display: block;
+}
+
+/* Contact form (formspree) */
+.form-card h3 {
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-dim);
+    margin-bottom: 16px;
+    font-weight: normal;
+    letter-spacing: 0.3px;
+}
+
+.form-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-card input,
+.form-card textarea {
+    background: var(--bg);
+    border: 1px solid var(--border-mid);
+    color: var(--text);
+    padding: 10px 13px;
+    font-family: Georgia, serif;
+    font-size: 13.5px;
+    border-radius: 2px;
+    outline: none;
+    resize: vertical;
+    transition: border-color 0.15s;
+    width: 100%;
+}
+
+.form-card input::placeholder,
+.form-card textarea::placeholder { color: var(--text-muted); }
+
+.form-card input:focus,
+.form-card textarea:focus { border-color: var(--gold); }
+
+.form-card button {
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    padding: 10px 22px;
+    font-family: Georgia, serif;
+    font-size: 13.5px;
+    cursor: pointer;
+    border-radius: 2px;
+    letter-spacing: 0.4px;
+    align-self: flex-start;
+    transition: background 0.18s, color 0.18s;
+    min-height: 44px;
+}
+
+.form-card button:hover {
+    background: var(--gold);
+    color: var(--bg);
+}
+
+.footer-card {
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--text-dim);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+
+/* ----------------------------- MOBILE/HANDHELD ------------------ */
+
+@media (max-width: 540px) { /* (Less than or equal to 540 pixels ) */
+
+    /* Hero */
+    .hero          { padding: 30px 8px 22px; }
+    .hero h1       { font-size: 36px; }
+    .hero--home h1 { font-size: 42px; }
+    .hero--sm h1   { font-size: 28px; }
+
+    /* General */
+    main  { padding: 0 12px 20px; }
+    .card { padding: 14px 14px; }
+
+    /* Methods (page) */
+    .methods-top                      { flex-direction: column; }
+    .methods-top .methods-diagram     { order: -1; }
+    .purif-row                        { flex-direction: column; }
+    .purif-row img                    { width: 100%; }
+    .details-row                      { flex-direction: column; gap: 10px; }
+    .details-row .card                { margin-bottom: 0; }
+
+    /* Systems (page) */
+    .niwa-bottom                      { flex-direction: column; }
+    .niwa-bottom .card:first-child,
+    .niwa-bottom .card:last-child     { flex: none; }
+
+    /* Further information (page) */
+    .fi-row                           { flex-direction: column; min-height: 0; }
+    .bullets-card                     { flex: none; width: 100%; }
+    .lawa-wrap                        { min-height: 280px; }
+    .lawa-wrap iframe                 { min-height: 280px; }
+
+    /* Nav */
+    .bottom-nav a { font-size: 12.5px; }
+}
+
+/* Tablet/ipad values */
+@media (min-width: 541px) and (max-width: 768px) { /* 541-768 (inclusive) pixels */
+    .hero h1       { font-size: 40px; }
+    .hero--home h1 { font-size: 50px; }
+    .details-row .card { font-size: 12px; }
+}
+
+/* For alternate sites I used pixels instead of percentages (as used above) to meet the assessment
+standard's criteria for "screen size" changes */
