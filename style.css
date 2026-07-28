@@ -137,4 +137,92 @@ a { /* "a" stands for "anchor" */
 
 a:hover { color: var(--gold-hover); } /* When hovering over the link, controls the color */
 
-/* ---------------------------bottom nav ------------
+/* ---------------------------bottom nav ------------ -- */
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    height: var(--nav-h);
+    display: flex;
+    background: var(--bg);
+    border-top: 1px solid var(--border);
+    z-index: 200;
+}
+
+.bottom-nav a {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 13.5px;
+    letter-spacing: 0.3px;
+    border-right: 1px solid var(--border);
+    transition: color 0.15s;
+    -webkit-tap-highlight-color: transparent; /* highlight color (options) */
+}
+
+.bottom-nav a:last-child { border-right: none; } /* last child in its parent container */
+.bottom-nav a:hover,
+.bottom-nav a.active { color: var(--gold); }
+
+/* --------------------------------HOMEPAGE ---------------------*/
+
+.further-link {
+    display: block;
+    text-align: center;
+    margin: 16px 0;
+    font-size: 15px;
+    color: var(--gold);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.further-link:hover { color: var(--gold-hover); }
+
+/* ------------------------- METHODS PAGE ------------------*/
+
+.methods-top {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.steps-list { /* (list(s)) */
+    flex: 1;
+    min-width: 0;
+    list-style: none;
+}
+
+.steps-list li {
+    margin-bottom: 8px;
+    font-size: 13px;
+    line-height: 1.55;
+}
+
+.steps-list li .n     { color: var(--gold); font-weight: bold; }
+.steps-list li strong { color: var(--white); } /* Settings for numbers in the list */
+
+.methods-diagram { flex: 0 0 42%; } /* Diagram options */
+
+.purif-row { /* Horizontal row layout with uniform spacing */
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+}
+
+.purif-row img { width: 56%; }
+
+.purif-text {
+    flex: 1;
+    font-size: 12.5px;
+    line-height: 1.65;
+}
+
+.purif-text .hl { color: var(--gold); font-weight: bold; }
+
+.details-row {
+    display: flex;
+    gap: 10px;
+}
